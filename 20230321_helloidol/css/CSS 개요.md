@@ -1,3 +1,6 @@
+# style 적용 3가지 방법
+1. <... style="...> in HTML
+1. '''<style>...</style>''' in HTML '''<head>'''
 selector {
      attribute: value;
 }
@@ -26,5 +29,11 @@ selector:nth-child() {}
 
 selector:hover {}
 
-우선순위 1. !important 2. #id 3. .class 4. TAG 5. * 6. 같은 우선순위 일때,
+# 우선순위
+1. !important 
+2. #id 
+3 .class 
+4. TAG 
+5. * 
+6. 같은 우선순위 일때,
 나중에 쓴게 적용
