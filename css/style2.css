@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;400;700&display=swap');
+
+:root {
+    /* color */
+    --first-color: #fdb033;
+    --second-color: #ffc361;
+    --body-color: #fff;
+    /* font */
+    --body-font: 'Hahmlet', serif;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.8rem;
+    --smaller-font-size: 0.6rem;
+    --font-thin: 200;
+    --font-regular: 400;
+    --font-bold: 700;
+
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    color: #000;
+}
+
+header {
+    background-color: var(--first-color);
+    position: fixed;
+    /*스크롤 해도 항상 위치 고정하자*/
+    top: 0;
+    right: 0;
+    /*오른쪽 끝까지*/
+    left: 0;
+    /*왼쪽 끝까지 늘리기*/
+}
+
+nav {
+    height: 44px;
+}
+
+.nav.container {
+    display: flex;
+    /*기본값이 수평정렬*/
+    justify-content: space-between;
+    align-items: center;
+    /*교차축 가운데 맞춤*/
+    padding: 0 16px;
+    color: #fff;
+}
+
+.nav.container a {
+    color: #fff
+}
+
+.nav-logo {
+    font-size: var(--h2-font-size);
+}
+
+.nav-list {
+    display: flex;
+    /*수평배치*/
+    column-gap: 80px;
+    font-weight: var(--font-bold);
+}
+
+.nav-toggle {
+    font-size: var(--h2-font-size);
+    visibility: visible;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--first-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--body-color);
+    font-weight: var(--font-bold);
+    font-size: var(--h2-font-size);
+    margin-top: 10%;
+}
+
+.circle-c {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: var(--first-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--body-color);
+    font-weight: var(--font-bold);
+    font-size: var(--h2-font-size);
+    margin-top: 5%;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+
+
+
+
+@media screen and (max-width: 720px) {
+    .circle {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background-color: var(--first-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--body-color);
+        font-weight: var(--font-bold);
+        font-size: var(--h2-font-size);
+        margin-top: 10%;
+    }
+
+    .circle-c {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background-color: var(--first-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--body-color);
+        font-weight: var(--font-bold);
+        font-size: 22px;
+        margin-top: 5%;
+        text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    /* .nav-logo 가운데로 */
+    .nav-logo {
+        font-size: var(--h2-font-size);
+    }
+
+    /* .nav-list 아래로, 안 보이게 */
+    .nav-list {
+        position: absolute;
+        top: 44px;
+        right: 0;
+        /*오른쪽끝까지*/
+        left: 0;
+        /*왼쪽끝까지*/
+        flex-direction: column;
+        /* .nav-item 수직 배열*/
+        /* align-items: center; */
+        text-align: center;
+        background-color: rgba(255, 218, 154, 0.627);
+        backdrop-filter: blur(8px);
+        height: 0;
+        /*처음에 안보이게*/
+        transition: all 0.5s;
+    }
+
+    .nav-item {
+        padding: 1em 0;
+        /* border-bottom: 2px solid #fff; */
+    }
+
+    .nav-link {
+        display: block;
+        /*링크를 양 옆으로 넓게*/
+    }
+
+    /* .nav-toggle 보이게 */
+    .nav-toggle {
+        visibility: visible;
+        position: absolute;
+        /*햄버거메뉴 공간을 차지하지 않기 .nav-logo를 가운데로*/
+        right: 16px;
+        /*햄버거 메뉴 원위치*/
+
+    }
+
+    /* .show-menu하면, .nav-list 보이게 */
+    /* .show-munu하면, .nav-toggle의 모양 X자로 */
+    .show-menu {
+        height: 55px;
+    }
+
+    .circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: var(--first-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--body-color);
+        font-weight: var(--font-bold);
+        font-size: 17px;
+        margin-top: 10%;
+    }
+
+    .circle-c {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: var(--first-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--body-color);
+        font-weight: var(--font-bold);
+        font-size: 19px;
+        margin-top: 5%;
+        text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+    }
+
+}
