@@ -8,7 +8,7 @@
 |Test|색으로 보는 심리테스트|
 
 ## 실행 방법
-1. https://github.com/luesnuy/ColorSymbol.git에 들어간다.
+1. https://colorsymbol.netlify.app/에 들어간다.
 2. 알고자 하는 카테고리를 선택한다.
 3. 알고자 하는 색상을 선택한다.
 
